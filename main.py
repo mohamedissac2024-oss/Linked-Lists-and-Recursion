@@ -6,21 +6,31 @@ if __name__ == "__main__":
     like insertion, recursion-based sum, search, and reverse.
     """
 
-    # TODO: 1) Create a LinkedList instance
+    # 1) Create a LinkedList instance
+    roster = LinkedList()
     
 
-    # TODO: 2) Insert some sample data using insert_at_front or insert_at_end
+    # 2) Insert some sample employee IDs.
+    # insert_at_end preserves order -> 101 -> 102 -> 103 -> 104
+    for emp_id in (101, 102, 103, 104):
+        roster.insert_at_end(emp_id)
     
-    # TODO: 3) Display the list to verify insertion
-    
-
-    # TODO: 4) Call recursive_sum and print the result
-    
-
-    # TODO: 5) Call recursive_search with a target and print result
+    # 3) Display the list to verify insertion
+    roster.display()
     
 
-    # TODO: 6) Call recursive_reverse, then display the reversed list
+    # 4) Call recursive_sum and print the result
+    print(f"Sum of employee IDs: {roster.recursive_sum()}")
+    
+
+    # 5) Call recursive_search with a target and print result
+    print(f"Search for 103: {roster.recursive_search(103)}")
+    print(f"Search for 999: {roster.recursive_search(999)}")
+    
+
+    # 6) Call recursive_reverse, then display the reversed list
+    roster.recursive_reverse()
+    roster.display()
     
 
 
